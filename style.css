@@ -127,9 +127,4 @@ a:hover {
 	text-decoration: underline;
 }
 
-/* This hack makes the spaces appear to not have underline */
-.no-underline {
-	color: #2e2e2e;
-	text-decoration: underline;
-}
 
