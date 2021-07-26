@@ -5,6 +5,7 @@ html, body {
 	font-family: Lato, Helvetica, sans-serif;
 	padding: 0;
 	position: absolute;
+	overflow: auto;
 }
 
 #background-img {
