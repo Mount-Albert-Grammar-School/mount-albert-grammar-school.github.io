@@ -18,9 +18,9 @@ window.onload = function() {
 				innernode.innerHTML = "Go Back"
 				node.appendChild(innernode);
 				
-				posts[i+2].appendChild(node);
+				posts[len - i + 1].appendChild(node);
 			} else {
-				posts[i+2].innerHTML = ""
+				posts[len - i + 1].innerHTML = ""
 			}
 		}
 	} else {
@@ -29,7 +29,7 @@ window.onload = function() {
 		
 		for (let i = 0; i < len; i++) {
 			// get data
-			let section = posts[i+2].getElementsByClassName("section")[0];
+			let section = posts[len - i + 1].getElementsByClassName("section")[0];
 			console.log(section);	
 
 			// shorten paragraph if long
