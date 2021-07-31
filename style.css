@@ -35,15 +35,20 @@ html, body {
 	padding-top: 1%;
 	padding-bottom: 1%;
 	text-align: center;
-	position: static;
+	position: absolute;
 	color: #3e3e3e;
+}
+
+.magic-bullshit {
+	top:0;
+	left:0;
 }
 
 #sidebar {
 	width: 20%;
 	height: 100%;
 	background-color: #79B0D7;
-	position: static;
+	position: relative;
 	text-align: right;
 	filter: opacity(85%);
 }
@@ -52,7 +57,7 @@ html, body {
 	width: 80%;
 	float: left;
 	margin-top: 30px;
-	position: static;
+	position: relative;
 	color: #0A3989;
 	font-size: calc(1.0vw + 0.5em);
 	position: static;
@@ -125,9 +130,4 @@ a {
 
 a:hover {
 	text-decoration: underline;
-}
-
-
-.container {
-	position:relative;
 }
