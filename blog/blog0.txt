@@ -1,0 +1,11 @@
+31/07/2021 - Welcome to the Programming Club!
+Welcome, everyone, to the MAGS Programming Club and its new website.<br/><br/>
+The website is curently being hosted on the domain "magsprogramming.tk", however this is mostly temporary and will likely change
+at some point in the future. Keep an eye out for that. I hope you are all going well with programming, and getting through your
+assessments and working towards excellence in your exams. Whether they be scholarships, exams that could determine the fate of
+your future career, or your first true high school exams in year 9.<br/><br/>
+I have no idea what else to write here. I suppose I should say something motivational and memorable. Uh..., uhm... "dope not h-"..no,
+that's not it. Alright. Let me try again.<br/><br/>
+<strong>" I was once a little kid who wanted to be a game developer. Now I can write stupid blog posts in html. One day, you, too, can do this. So keep pursuing your goals... probably&#8482; "</strong><br/><br/>
+Happy Programming!<br/>
+- Mekal
