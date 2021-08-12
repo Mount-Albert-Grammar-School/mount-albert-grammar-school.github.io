@@ -1,25 +1,7 @@
 const URL_PARAMS = new URLSearchParams(window.location.search);
 const MAX_PREVIEW_SIZE = 260;
 
-window.onload = function() {
-	fetch('https://www.magsprogramming.tk/blog/blog0.txt')
-		.then(response => response.text())
-		.then((data) => {
-			let splitPos = data.indexOf("\n");
-			let postsSection = document.getElementById("posts");
-			
-			// title
-			let titleNode = document.createElement("h2");
-			titleNode.innerHTML = data.substring(0, splitPos);
-			postsSection.appendChild(titleNode);
-			
-			// body
-			let bodyNode = document.createElement("p");
-			bodyNode.innerHTML = data.substring(splitPos + 1);
-			postsSection.appendChild(bodyNode);
-		});
-	
-	// Filter Posts based on what they are viewing
+function filterPosts() {
 	if (URL_PARAMS.has('post')) {
 		let postId = URL_PARAMS.get('post');
 		
@@ -69,4 +51,35 @@ window.onload = function() {
 			section.appendChild(node);
 		}
 	}
+}
+
+window.onload = function() {
+	fetch('https://www.magsprogramming.tk/blog/blog0.txt')
+		.then(response => response.text())
+		.then((data) => {
+			let splitPos = data.indexOf("\n");
+			let posts = document.getElementById("posts");
+			
+			// Wrapper
+			let centre = document.createElement("center");
+			let section = document.createElement("div");
+			section.className = "section";
+			
+			// title
+			let titleNode = document.createElement("h2");
+			titleNode.innerHTML = data.substring(0, splitPos);
+			section.appendChild(titleNode);
+			
+			// body
+			let bodyNode = document.createElement("p");
+			bodyNode.innerHTML = data.substring(splitPos + 1);
+			section.appendChild(bodyNode);
+			
+			// Finish Wrapper
+			centre.appendChild(section);
+			posts.appendChild(centre);
+			
+			// Filter Posts based on what they are viewing
+			filterPosts();
+		});
 }
