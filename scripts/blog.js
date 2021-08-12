@@ -53,10 +53,29 @@ function filterPosts() {
 	}
 }
 
-window.onload = function() {
-	fetch('https://www.magsprogramming.tk/blog/blog0.txt')
-		.then(response => response.text())
-		.then((data) => {
+var loaded = 0;
+var required = 0;
+
+// because fetch is async lol.
+function loadNext() {
+	fetch('https://www.magsprogramming.tk/blog/blog' + required + '.txt')
+		.then(response => { // on response
+			if (!response.ok) { // if an error, throw an error to trigger the catch block
+				throw Error(response.statusText);
+			}
+			
+			// otherwise increment the required count to load, and try start loading the next one async
+			
+			required++;
+			loadNext();
+			
+			// return the text response, progressing to the next "then"
+			
+			return response.text();
+		})
+		.then(data => {
+			// Process the data into an html element
+			
 			let splitPos = data.indexOf("\n");
 			let posts = document.getElementById("posts");
 			
@@ -77,9 +96,23 @@ window.onload = function() {
 			
 			// Finish Wrapper
 			centre.appendChild(section);
-			posts.appendChild(centre);
 			
+			if (loaded == 0) {
+				posts.appendChild(centre);
+			} else {
+				posts.insertBefore(centre, posts.children[2]);
+			}
+			
+			loaded++;
+		})
+		.catch(error => {
+			while (loaded < required) {
+				// pass
+				// this better not be optimised out
+			}
 			// Filter Posts based on what they are viewing
 			filterPosts();
 		});
 }
+
+window.onload = loadNext;
