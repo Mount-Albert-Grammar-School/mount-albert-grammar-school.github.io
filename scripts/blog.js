@@ -2,7 +2,7 @@ const URL_PARAMS = new URLSearchParams(window.location.search);
 const MAX_PREVIEW_SIZE = 260;
 
 window.onload = function() {
-	fetch('https://magsprogramming.tk/blog/blog0.txt')
+	fetch('https://www.magsprogramming.tk/blog/blog0.txt')
 		.then(response => response.text())
 		.then((data) => {
 			let splitPos = data.indexOf("\n");
