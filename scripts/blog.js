@@ -2,6 +2,24 @@ const URL_PARAMS = new URLSearchParams(window.location.search);
 const MAX_PREVIEW_SIZE = 260;
 
 window.onload = function() {
+	fetch('https://magsprogramming.tk/blog/blog0.txt')
+		.then(response => response.text())
+		.then((data) => {
+			let splitPos = data.indexOf("\n");
+			let postsSection = document.getElementById("posts");
+			
+			// title
+			let titleNode = document.createElement("h2");
+			titleNode.innerHTML = data.substring(0, splitPos);
+			postsSection.appendChild(titleNode);
+			
+			// body
+			let bodyNode = document.createElement("p");
+			bodyNode.innerHTML = data.substring(splitPos + 1);
+			postsSection.appendChild(bodyNode);
+		});
+	
+	// Filter Posts based on what they are viewing
 	if (URL_PARAMS.has('post')) {
 		let postId = URL_PARAMS.get('post');
 		
