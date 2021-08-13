@@ -143,12 +143,20 @@ a:hover {
 }
 
 #loading-spinner img {
-	top:40%;
+	top:30%;
 	margin-left:calc(0.8*50%);
 	animation-name: spin;
 	animation-duration: 5000ms;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear; 
+	position:relative;
+}
+
+#loading-spinner h2 {
+	top:30%;
+	text-align: center;
+	font-size: calc(0.6vw + 1.8em);
+	color: #3e3e3e;
 	position:relative;
 }
 
