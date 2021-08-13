@@ -51,6 +51,8 @@ function filterPosts() {
 			section.appendChild(node);
 		}
 	}
+	
+	document.getElementById("loading-spinner").remove();
 }
 
 var loaded = 0;

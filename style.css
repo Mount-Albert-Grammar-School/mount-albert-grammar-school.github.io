@@ -131,3 +131,32 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
+#loading-spinner {
+	position:absolute;
+	margin-left:20%;
+	width:80%;
+	height:90%;
+	z-index: 3;
+	top:0;
+	background-color:#e9e9e9;
+}
+
+#loading-spinner img {
+	top:40%;
+	margin-left:calc(0.8*50%);
+	animation-name: spin;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+	position:relative;
+}
+
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+    }
+	to {
+		transform:rotate(360deg);
+	}
+}
