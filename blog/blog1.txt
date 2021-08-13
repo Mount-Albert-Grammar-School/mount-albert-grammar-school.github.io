@@ -1,8 +1,8 @@
 13/08/2021 - Website Updates
 Hi Everyone.<br/>
-Just writing here to notify everyone of recent changes to the website.<br/>
+Just writing here to notify everyone of recent changes to the website.<br/><br/>
 Firstly, Nick has moved the about stuff from the main page to its own section, and fixed some image loading issues in locations that cannot access discord by moving the background image to a local asset.<br/>
-Secondly, I (Mekal) have reworked some of the blog script so it can load blog posts from txt files following a naming convention and order. 
-Also, we have already had someone try meme-vandalise the website name. If you have push access to the website, please kindly avoid vandalism. Thanks.<br/>
+Secondly, I (Mekal) have reworked some of the blog script so it can load blog posts from txt files following a naming convention and order.<br/><br/>
+Also, we have already had someone try meme-vandalise the website name. If you have push access to the website, please kindly avoid vandalism. Thanks.<br/></br>
 Happy Programming!<br/>
 - Mekal
