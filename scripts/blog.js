@@ -60,7 +60,7 @@ var required = 0;
 
 // because fetch is async lol.
 function loadNext() {
-	fetch('https://www.magsprogramming.tk/blog/blog' + required + '.txt')
+	fetch('https://mount-albert-grammar-school.github.io/blog/blog' + required + '.txt')
 		.then(response => { // on response
 			if (!response.ok) { // if an error, throw an error to trigger the catch block
 				throw Error(response.statusText);
